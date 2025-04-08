@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+header {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 45px;
+    padding: 40px;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+    background: #2a2a2a;
+    padding: 10px;
+}
+
+figure:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.feedback {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+.feedback h2 {
+    color: #ff8a00;
+}
+.feedback input, .feedback textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.stars {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* Estilizar estrelas selecionadas */
+.stars input:checked ~ label {
+    color: gray; /* evita que as da direita fiquem amarelas */
+}
+
+/* O segredo: pintar todas as anteriores */
+.stars label:hover,
+.stars label:hover ~ label,
+.stars input:checked + label,
+.stars input:checked + label ~ label {
+    color: gold;
+}
+
+.feedback button {
+    background: #ff8a00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.reviews {
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+.comentario {
+    margin-bottom: 15px;
+}

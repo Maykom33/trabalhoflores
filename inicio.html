@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio de Fotografia</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Portfólio de Fotografia</h1>
+    <p>Este site utiliza imagens que não se repetem utilizando IA</p>
+    <p>Utiliza frases motivadoras utilizadas por IA</p>
+  </header>
+
+  <section class="gallery" id="gallery"></section>
+
+  <section class="feedback">
+    <h2>O que achou do site?</h2>
+        <form id="feedbackForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+        <label for="estrelas">Avaliação:</label>
+        <div class="stars">
+            <input type="radio" id="star5" name="estrelas" value="5"><label for="star5">★</label>
+            <input type="radio" id="star4" name="estrelas" value="4"><label for="star4">★</label>
+            <input type="radio" id="star3" name="estrelas" value="3"><label for="star3">★</label>
+            <input type="radio" id="star2" name="estrelas" value="2"><label for="star2">★</label>
+            <input type="radio" id="star1" name="estrelas" value="1"><label for="star1">★</label>
+
+        </div>
+            <button type="submit">Enviar</button>
+        </form>
+
+    <div class="reviews" id="reviews">
+        <h3>Últimos Comentários</h3>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Portfólio de Fotografia - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ✅ Coloque o script aqui no final -->
+
+  <script src="assets/script/script.js"></script>
+
+</body>
+</html>
